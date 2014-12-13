@@ -12,6 +12,8 @@ Newstips.Routers.NewstipsRouter = Backbone.Router.extend({
 	
 	tips: function () {
 		var tips = new Newstips.Collections.Tips();
+		var tipsShow = new Newstips.Views.Tips({ collection: tips });
+		this.root.html(tipsShow.render().$el);
 	},
 	
 	tip: function(tipModel) {
