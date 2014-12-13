@@ -3,11 +3,7 @@ window.Newstips = {
   Collections: {},
   Views: {},
   Routers: {},
-  initialize: function() {
-    alert('Hello from Backbone!');
+  initialize: function($root) {
+		$rootPage = $root;
   }
 };
-
-$(document).ready(function(){
-  Newstips.initialize();
-});
