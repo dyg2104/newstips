@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'backbone-on-rails'
 gem 'pg_search'
 gem 'rails_12factor'
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   gem 'debugger'
