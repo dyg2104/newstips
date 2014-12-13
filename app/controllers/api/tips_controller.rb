@@ -1,9 +1,9 @@
 class Api::TipsController < ApplicationController
-  before_filter require_signed_in!
+  before_filter :require_signed_in!
 
   def index
-    if params[:tip][:query]
-      @tips = Tip.search_by_subject_and_text(params[:tip][:query])
+    if params[:query]
+      @tips = Tip.search_by_subject_and_text(params[:query])
     else
       @tips = Tip.all
     end

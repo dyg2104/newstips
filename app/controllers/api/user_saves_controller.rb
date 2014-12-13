@@ -1,5 +1,5 @@
 class Api::UserSavesController < ApplicationController
-  before_filter require_signed_in!
+  before_filter :require_signed_in!
 
   def create
     tip_id = params[:user_save][:tip_id]

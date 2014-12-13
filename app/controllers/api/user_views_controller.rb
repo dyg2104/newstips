@@ -1,5 +1,5 @@
 class Api::UserViewsController < ApplicationController
-  before_filter require_signed_in!
+  before_filter :require_signed_in!
 
   def create
     tip_id = params[:user_view][:tip_id]
