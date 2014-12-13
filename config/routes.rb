@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root 'tips#new'
   get 'dashboard', to: 'pages#dashboard'
 
-  resource :user, only: :create
-  resource :session, only: [:create, :destroy]
-  resources :tips, only: :create
+  resource :user, only: [:new, :create]
+  resource :session, only: [:new, :create, :destroy]
+  resources :tips, only: [:new, :create]
 
   namespace :api, defaults: { format: :json } do
     resources :tips, only: :index
