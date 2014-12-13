@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213205611) do
+ActiveRecord::Schema.define(version: 20141213215155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20141213205611) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "subject"
+    t.string   "phone"
   end
 
   add_index "tips", ["city"], name: "index_tips_on_city", using: :btree
