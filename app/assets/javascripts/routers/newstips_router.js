@@ -26,13 +26,6 @@ Newstips.Routers.NewstipsRouter = Backbone.Router.extend({
 	},
 
 	searchResults: function (query) {
-		var tips = new Newstips.Collections.Tips();
-		tips.fetch({
-			success: function({
-				var view = new Newstips.Views.IndexShow({
-					// collection: Newstips.Collections.
-				});
-			})
-		})
+
 	}
 })
