@@ -1,10 +1,22 @@
 
+// VARIABLES
+// --------------------------
+$navy:              #34495E
+$teal:              #16A085
+$porcelain:         #ECF0F1
+$light-sea-green:   #1BA39C
+$madison:           #2C3E50
+$hummingbird:       #C5EFF7
+$cinnabar:          #E74C3C
+
+$page-gutter: 15px
+
+
 // BASE STYLES
 // --------------------------
 body
-    // padding-top: 50px
     padding: 0px
-
+    background-color: $porcelain
 
 // NAVIGATION
 // --------------------------
@@ -15,15 +27,31 @@ body
 
 // SIDEBAR
 // --------------------------
-.sidebar
-    position: fixed
-    top: 0px
-    bottom: 0
-    left: 0
+.sidebar-wrapper
+    background-color: $madison
+    border-right: 1px solid darken($madison, 25%)
+    padding: 0
     z-index: 1000
+    position: fixed
+    bottom: 0
+    right: 0
+    left: 0
+    top: 0
+
+.sidebar
     display: block
-    // padding: 20px
     overflow-x: hidden
+    padding: 0 $page-gutter
     overflow-y: auto
-    background-color: #f5f5f5
-    border-right: 1px solid #eee
+
+
+// CONTENT
+// --------------------------
+.content
+    padding: $page-gutter
+
+.content-wrapper
+    padding: 0
+
+.page-header
+    margin: 0
