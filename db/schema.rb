@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213171931) do
+ActiveRecord::Schema.define(version: 20141213175304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 20141213171931) do
   add_index "tips", ["name"], name: "index_tips_on_name", using: :btree
   add_index "tips", ["state"], name: "index_tips_on_state", using: :btree
 
+  create_table "user_saves", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "tip_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_saves", ["tip_id"], name: "index_user_saves_on_tip_id", using: :btree
+  add_index "user_saves", ["user_id"], name: "index_user_saves_on_user_id", using: :btree
+
   create_table "user_views", force: true do |t|
     t.integer  "user_id"
     t.integer  "tip_id"
@@ -41,11 +51,14 @@ ActiveRecord::Schema.define(version: 20141213171931) do
   add_index "user_views", ["user_id"], name: "index_user_views_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "name",       null: false
+    t.string   "name",            null: false
+    t.string   "password_digest", null: false
+    t.string   "session_token",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "users", ["name"], name: "index_users_on_name", using: :btree
+  add_index "users", ["session_token"], name: "index_users_on_session_token", using: :btree
 
 end
