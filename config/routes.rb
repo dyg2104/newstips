@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root 'tips#new'
-  get '/dashboard' => 'pages#dashboard'
+  get 'dashboard', to: 'pages#dashboard'
 
   resource :user
   resource :session
