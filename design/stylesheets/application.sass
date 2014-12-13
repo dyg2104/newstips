@@ -6,6 +6,7 @@ $teal:              #16A085
 $porcelain:         #ECF0F1
 $light-sea-green:   #1BA39C
 $madison:           #2C3E50
+$madison-light:     #C4D1DE
 $hummingbird:       #C5EFF7
 $cinnabar:          #E74C3C
 
@@ -13,6 +14,7 @@ $page-gutter: 15px
 
 $font-source-sans:  'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif
 $font-varela:       'Varela Round', 'Helvetica Neue', Helvetica, sans-serif
+$font-montserrat:   'Montserrat', 'Helvetica Neue', Helvetica, sans-serif
 
 
 // BASE STYLES
@@ -20,7 +22,8 @@ $font-varela:       'Varela Round', 'Helvetica Neue', Helvetica, sans-serif
 body
     padding: 0px
     background-color: $porcelain
-    font-family: $font-varela
+    font-family: $font-source-sans
+
 
 // NAVIGATION
 // --------------------------
@@ -28,12 +31,20 @@ body
     border: 0
     border-radius: 0px
 
+.navbar-header
+    width: 100%
+
 .navbar-brand
-    //font-family: $font-varela
+    display: block
+    height: 60px
+    width: 100%
+    text-indent: -9999px
     text-transform: uppercase
-    height: auto
     background-color: darken($madison, 5%)
-    padding-top: 8px
+    background-position: center 10px
+    background-size: auto 34px
+    background-repeat: no-repeat
+    background-image: url('../images/newstips-small.svg')
     img
         width: 100%
 
@@ -42,10 +53,10 @@ body
 // --------------------------
 .sidebar-wrapper
     background-color: $madison
-    border-right: 1px solid darken($madison, 25%)
-    padding: 0
-    z-index: 1000
+    font-family: $font-montserrat
     position: fixed
+    z-index: 1000
+    padding: 0
     bottom: 0
     right: 0
     left: 0
@@ -53,18 +64,30 @@ body
 
 .sidebar
     display: block
+    overflow-y: auto
     overflow-x: hidden
     padding: 0 $page-gutter
-    overflow-y: auto
 
 
 // CONTENT
 // --------------------------
 .content
-    padding: $page-gutter
+    padding: 0 $page-gutter
 
 .content-wrapper
     padding: 0
 
+.content-header
+    height: 60px
+    padding: 0 2px
+    background-color: lighten($madison, 10%)
+
 .page-header
     margin: 0
+    font-size: 26px
+    font-weight: 700
+    font-family: $font-montserrat
+    text-transform: uppercase
+    color: #fff
+    line-height: 60px
+    border: 0
