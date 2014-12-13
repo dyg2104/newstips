@@ -1,2 +1,2 @@
-module Api::SessionsHelper
+module SessionsHelper
 end
