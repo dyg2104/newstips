@@ -1,14 +1,24 @@
 class SessionsController < ApplicationController
 
-  def create
-    @user = User.find_by(name: params[:session][:name])
+  def new
+    render :new
+  end
 
-    if @user.authenticate(params[:session][:password])
-      sign_in!(@user)
-      render :show
+  def create
+    user = User.find_by(name: params[:session][:name])
+
+    if user.authenticate(params[:session][:password])
+      sign_in!(user)
+      redirect_to root_url
     else
-      render json: { errors: 'Invalid credentials' }, status: :unauthorized
+      flash.now[:errors] = ['Invalid username/password combination']
+      render :new
     end
+  end
+
+  def destroy
+    sign_out!
+    render nothing: true, status: :ok
   end
 
 end
