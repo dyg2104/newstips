@@ -15,8 +15,10 @@ $page-gutter: 15px
 $font-source-sans:  'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif
 $font-varela:       'Varela Round', 'Helvetica Neue', Helvetica, sans-serif
 $font-montserrat:   'Montserrat', 'Helvetica Neue', Helvetica, sans-serif
+$font-merriweather:   'Merriweather', 'Helvetica Neue', Helvetica, sans-serif
 
-$header-height: 64px
+$header-height: 68px
+
 
 // BASE STYLES
 // --------------------------
@@ -29,9 +31,9 @@ body
 .container
     background-color: lighten($porcelain, 50%)
     position: relative
+    bottom: 0
     top: 0
     overflow: hidden
-    bottom: 0
     min-height: 900px
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1)
 
@@ -52,8 +54,8 @@ body
     text-indent: -9999px
     text-transform: uppercase
     background-color: darken($madison, 5%)
-    background-position: center 12px
-    background-size: auto 34px
+    background-position: center 10px
+    background-size: auto 40px
     background-repeat: no-repeat
     background-image: url('../images/newstips-small.svg')
     img
@@ -65,13 +67,10 @@ body
 .sidebar-wrapper
     background-color: $madison
     font-family: $font-montserrat
-    //position: fixed
+    min-height: 1000px
     z-index: 1000
     padding: 0
-    min-height: 1000px
     bottom: 0
-    //right: 0
-    //left: 0
     top: 0
 
 .sidebar
@@ -84,7 +83,7 @@ body
 // CONTENT
 // --------------------------
 .content
-    padding: 0 $page-gutter
+    padding: 0px
 
 .content-wrapper
     padding: 0px
@@ -93,12 +92,11 @@ body
     height: $header-height
     padding: 0
     background-color: lighten($madison, 10%)
-    box-shadow: $porcelain 0px 2px 0px
 
 .page-header
     margin: 0
     font-size: 26px
-    padding-left: 2px
+    padding-left: 20px
     font-weight: 700
     font-family: $font-montserrat
     text-transform: uppercase
@@ -122,8 +120,39 @@ body
     font-size: 16px
 
 .tip-wrapper
+    padding: 0px 10px 30px 10px
+    .col-xs-8
+        padding-right: 0
 
 .tip
     background: #fff
+    padding: 14px 18px
+    border-radius: 4px
+    box-shadow: 0px 2px 4px lighten($madison-light, 5%)
+
+.content-feed
+    background-color: lighten($madison-light, 15%)
+
+.sub-header
+    margin-top: 0
+    padding: 15px 20px 0px 25px
+    font-family: $font-montserrat
+    font-size: 20px
+    color: $light-sea-green
+
 
 .tip-content
+
+.tip-paragraph
+    font-size: 20px
+    font-style: italic
+    padding: 0
+    margin: 0
+    color: $navy
+    font-family: $font-merriweather
+
+.tip-footnote
+    color: lighten($navy, 40%)
+    text-transform: uppercase
+    padding-top: 5px
+    font-size: 12px
