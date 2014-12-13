@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if user.authenticate(params[:session][:password])
       sign_in!(user)
-      redirect_to root_url
+      redirect_to new_tip_url
     else
       flash.now[:errors] = ['Invalid username/password combination']
       render :new
