@@ -1,3 +1,5 @@
 class Tip < ActiveRecord::Base
-  has_many :userviews
+  validates :text, presence: true
+
+  has_many :user_views
 end
