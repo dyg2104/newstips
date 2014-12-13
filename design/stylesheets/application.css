@@ -1,0 +1,18 @@
+body {
+  padding: 0px; }
+
+.navbar {
+  border: 0;
+  border-radius: 0px; }
+
+.sidebar {
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: whitesmoke;
+  border-right: 1px solid #eeeeee; }

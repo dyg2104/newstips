@@ -17,3 +17,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+**/.idea
+.idea/**
+.DS_Store
+.sass-cache
+/.idea
+
+.idea/newstips.iml
