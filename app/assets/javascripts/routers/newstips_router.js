@@ -1,4 +1,4 @@
-Newstips.Routers.NewsTipsRouter = Backbone.Router.extend({
+Newstips.Routers.NewstipsRouter = Backbone.Router.extend({
 	routes: {
 		"" : "tips",
 		"tip" : "tip",
@@ -6,12 +6,12 @@ Newstips.Routers.NewsTipsRouter = Backbone.Router.extend({
 		"search/:query" : "searchResults"
 	},
 	
+	initialize: function (root) {
+		this.root = root;
+	},
+	
 	tips: function () {
 		var tips = new Newstips.Collections.Tips();
-		// tips.fetch({
-// 			success: function({
-// 			})
-// 		})
 	},
 	
 	tip: function(tipModel) {
