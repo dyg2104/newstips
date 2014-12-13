@@ -17,10 +17,13 @@
 		value="<%= form_authenticity_token %>">
 	
 	<label for="username">Username</label>
-	<input id="username" type="text" name="user[name]">
+	<input id="username" type="text" name="user[name]"><br>
 	
 	<label for="password">Password</label>
-	<input id="password" type="password" name="user[password]">
+	<input id="password" type="password" name="user[password]"><br>
+	
+	<label for="keywords">Keywords (Separate by comma)</label>
+	<textarea id="keywords" name="user[keywords]"></textarea><br>
 	
 	<input type="submit" value="submit">
 </form>
