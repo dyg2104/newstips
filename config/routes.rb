@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   resources :tips
 
   namespace :api, defaults: { format: :json } do
-    resources :tips
-    resources :user_saves
-    resources :user_views
+    resources :tips, only: :index
+    resources :user_saves, only: [:create, :destroy]
+    resources :user_views, only: :create
   end
 
 end
