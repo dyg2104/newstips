@@ -1,9 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :require_signed_in!, only: :dashboard
-
-  def home
-    render :home
-  end
+  before_filter :require_signed_in!
 
   def dashboard
     render :dashboard
