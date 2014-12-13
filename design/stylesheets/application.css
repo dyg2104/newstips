@@ -1,10 +1,19 @@
 body {
   padding: 0px;
-  background-color: #ecf0f1; }
+  background-color: #ecf0f1;
+  font-family: "Varela Round", "Helvetica Neue", Helvetica, sans-serif; }
 
 .navbar {
   border: 0;
   border-radius: 0px; }
+
+.navbar-brand {
+  text-transform: uppercase;
+  height: auto;
+  background-color: #233140;
+  padding-top: 8px; }
+  .navbar-brand img {
+    width: 100%; }
 
 .sidebar-wrapper {
   background-color: #2c3e50;
