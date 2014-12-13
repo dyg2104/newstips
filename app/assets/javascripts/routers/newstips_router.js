@@ -1,6 +1,7 @@
 Newstips.Routers.NewsTipsRouter = Backbone.Router.extend({
 	routes: {
 		"" : "tips",
+		"tip" : "tip",
 		"search" : "search",
 		"search/:query" : "searchResults"
 	},
@@ -11,6 +12,10 @@ Newstips.Routers.NewsTipsRouter = Backbone.Router.extend({
 			success: function({
 			})
 		})
+	},
+	
+	tip: function(tipModel) {
+		
 	},
 	
 	search: function () {
