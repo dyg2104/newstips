@@ -9,12 +9,12 @@ class TipsController < ApplicationController
     @tip = Tip.new(tip_params)
 
     if @tip.save
-      flash = ['Tip succesfully submitted!']
-      redirect_to root_url
+      flash.now[:notices] = ['Tip succesfully submitted!']
     else
-      flash.now = @tip.errors.full_messages
-      render :new
+      flash.now[:notices] = @tip.errors.full_messages
     end
+
+    render :new
   end
 
   private
