@@ -1,4 +1,12 @@
 <div id="newstips-wrapper" class="container">
+	<div id="sign-in-nav" class="col-sm-6 pull-right">
+		<ul class="nav nav-justified">
+	      <li role="presentation" class="active"><a href="#">Register</a></li>
+	      <li role="presentation"><a href="#">Sign in</a></li>
+	      <li role="presentation"><a href="#">Journalists</a></li>
+	    </ul>
+	</div>
+
 	<div id="header" class="jumbotron text-center">
 		<h1 class="newstips-head">Newstips</h1>
 		<h2 class="tips-subhead">Crowdsourcing tips for journalists</h2>
@@ -14,13 +22,13 @@
 			name="authenticity_token"
 			value="<%= form_authenticity_token %>">
 
-			<div class="col-xs-6">
+			<div class="col-sm-6">
 				<div class="form-group">
-					<textarea name="tip[text]" placeholder="Enter your tip here." class="form-control" rows="5" id="comment"></textarea>
+					<textarea name="tip[text]" placeholder="Enter your tip here." class="form-control" rows="10" id="comment"></textarea>
 				</div>
 			</div>
 
-			<div class="col-xs-6">
+			<div class="col-sm-6">
 				<div class="form-group">
 				    <label class="control-label col-sm-2" for="username">Name</label>
 				    <div class="col-sm-10">
@@ -140,20 +148,21 @@
 			  	</div>
 
 			</div>
-			<div class="col-xs-6">
+			<div class="col-sm-12 text-center">
 		  		<button type="submit" class="btn btn-default">Submit</button>
 		 	</div>
 		</form>
 	</div>
 
-	<div id="newstips-faq-about" class="col-xs-12 text-center">
-		<div id="about" class="col-xs-6">
+	<div id="newstips-faq-about" class="col-xs-12 col-sm-12 text-center">
+		<div id="about" class="col-sm-6">
 			<h3>About</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+			<p>Newstips is a professional service that allows users from all over the world to submit leads on stories taking place in the world around you.</p>
 		</div>
-		<div id="faq" class="col-xs-6">
+		<div id="faq" class="col-sm-6">
 			<h3>FAQ</h3>
-			<p>amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+			<p>What the heck is this?</p>
+			<p>This is Newstips, obviously.</p>
 		</div>
 	</div>
 </div>
