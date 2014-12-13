@@ -8,10 +8,10 @@ Newstips.Routers.NewsTipsRouter = Backbone.Router.extend({
 	
 	tips: function () {
 		var tips = new Newstips.Collections.Tips();
-		tips.fetch({
-			success: function({
-			})
-		})
+		// tips.fetch({
+// 			success: function({
+// 			})
+// 		})
 	},
 	
 	tip: function(tipModel) {
