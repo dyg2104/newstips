@@ -16,13 +16,24 @@ $font-source-sans:  'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif
 $font-varela:       'Varela Round', 'Helvetica Neue', Helvetica, sans-serif
 $font-montserrat:   'Montserrat', 'Helvetica Neue', Helvetica, sans-serif
 
+$header-height: 64px
 
 // BASE STYLES
 // --------------------------
 body
     padding: 0px
-    background-color: $porcelain
+    background-color: #eff3f6
     font-family: $font-source-sans
+    background-image: url('http://subtlepatterns.com/patterns/white_wall_hash.png')
+
+.container
+    background-color: lighten($porcelain, 50%)
+    position: relative
+    top: 0
+    overflow: hidden
+    bottom: 0
+    min-height: 900px
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1)
 
 
 // NAVIGATION
@@ -36,12 +47,12 @@ body
 
 .navbar-brand
     display: block
-    height: 60px
+    height: $header-height
     width: 100%
     text-indent: -9999px
     text-transform: uppercase
     background-color: darken($madison, 5%)
-    background-position: center 10px
+    background-position: center 12px
     background-size: auto 34px
     background-repeat: no-repeat
     background-image: url('../images/newstips-small.svg')
@@ -54,12 +65,13 @@ body
 .sidebar-wrapper
     background-color: $madison
     font-family: $font-montserrat
-    position: fixed
+    //position: fixed
     z-index: 1000
     padding: 0
+    min-height: 1000px
     bottom: 0
-    right: 0
-    left: 0
+    //right: 0
+    //left: 0
     top: 0
 
 .sidebar
@@ -75,19 +87,43 @@ body
     padding: 0 $page-gutter
 
 .content-wrapper
-    padding: 0
+    padding: 0px
 
 .content-header
-    height: 60px
-    padding: 0 2px
+    height: $header-height
+    padding: 0
     background-color: lighten($madison, 10%)
+    box-shadow: $porcelain 0px 2px 0px
 
 .page-header
     margin: 0
     font-size: 26px
+    padding-left: 2px
     font-weight: 700
     font-family: $font-montserrat
     text-transform: uppercase
     color: #fff
-    line-height: 60px
+    line-height: $header-height
     border: 0
+
+.header-search-wrapper
+    padding: 0px
+    position: relative
+    right: -1px
+
+.header-search
+    background: #fff
+    height: $header-height
+    width: 100%
+    display: block
+    color: $madison-light
+    padding: 20px 15px
+    text-transform: uppercase
+    font-size: 16px
+
+.tip-wrapper
+
+.tip
+    background: #fff
+
+.tip-content
