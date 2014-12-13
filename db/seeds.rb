@@ -6,3 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# Tip.create([
+  # { name: 'paparaz101',
+    # text: 'spotted '
+  # },
+
+  # {},
+  # {}
+# ])
