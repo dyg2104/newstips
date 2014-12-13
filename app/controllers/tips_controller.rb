@@ -20,7 +20,7 @@ class TipsController < ApplicationController
   private
 
   def tip_params
-    params.require(:tip).permit(:name, :text, :email, :city, :state)
+    params.require(:tip).permit(:name, :text, :email, :city, :state, :phone, :subject)
   end
 
 end

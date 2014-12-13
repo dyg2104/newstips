@@ -6,39 +6,46 @@
 
 	<div id="tips">
 		<h2 class="got-tips">Got a tip?</h2>
-		<form class="form-horizontal" role="form">
+
+		<form action="<%= tips_url %>" method="post" class="form-horizontal" role="form">
+
+		<input
+			type="hidden"
+			name="authenticity_token"
+			value="<%= form_authenticity_token %>">
+
 			<div class="col-xs-6">
 				<div class="form-group">
-					<textarea placeholder="Enter your tip here." class="form-control" rows="5" id="comment"></textarea>
+					<textarea name="tip[text]" placeholder="Enter your tip here." class="form-control" rows="5" id="comment"></textarea>
 				</div>
 			</div>
 
 			<div class="col-xs-6">
 				<div class="form-group">
-				    <label class="control-label col-sm-2" for="inputName">Name</label>
+				    <label class="control-label col-sm-2" for="username">Name</label>
 				    <div class="col-sm-10">
-				    	<input type="name" class="form-control" id="inputName" placeholder="Enter name">
+				    	<input type="name" name="tip[name]" class="form-control" id="username" placeholder="Enter name">
 				    </div>
 				</div>
 
 			  	<div class="form-group">
 			    	<label class="control-label col-sm-2" for="exampleInputEmail">Email</label>
 			    	<div class="col-sm-10">
-			    		<input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+			    		<input type="email" name="tip[email]" class="form-control" id="exampleInputEmail" placeholder="Enter email">
 			    	</div>
 			  	</div>
 
 			  	<div class="form-group">
 			    	<label class="control-label col-sm-2" for="phoneInput">Phone</label>
 			    	<div class="col-sm-10">
-			    		<input type="text" class="form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" placeholder="Enter phone number: (555) 555-5555">
+			    		<input name="tip[phone]" type="text" class="form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" placeholder="Enter phone number: (555) 555-5555">
 			    	</div>
 			  	</div>
 
 			  	<div class="form-group">
 				  	<label class="control-label col-sm-2" for="subjectInput">Subject</label>
 				  	<div class="col-sm-10">
-				  		<select class="col-sm-10 form-control">
+				  		<select name="tip[subject]" class="col-sm-10 form-control">
 
 						    <option value="World">World</option>
 							<option value="U.S.">U.S.</option>
@@ -70,11 +77,68 @@
 				</div>
 
 			  	<div class="form-group">
-			    	<label class="control-label col-sm-2" for="locationInput">Location</label>
-			    	<div class="col-sm-10">
-			    		<input type="location" class="form-control" id="locationInput" placeholder="Enter your location (address)">
+			    	<label class="control-label col-sm-2" for="cityInput">City</label>
+			    	<div class="col-sm-6">
+			    		<input name="tip[city]" type="location" class="form-control" id="locationInput" placeholder="Enter your city">
+			    	</div>
+			    	<label class="control-label col-sm-2" for="stateInput">State</label>
+			    	<div class="col-sm-2">
+			    		 <select name="tip[state]" type="state" class="form-control">
+				            <option value="AL">AL</option>
+				            <option value="AK">AK</option>
+				            <option value="AZ">AZ</option>
+				            <option value="AR">AR</option>
+				            <option value="CA">CA</option>
+				            <option value="CO">CO</option>
+				            <option value="CT">CT</option>
+				            <option value="DE">DE</option>
+				            <option value="DC">DC</option>
+				            <option value="FL">FL</option>
+				            <option value="GA">GA</option>
+				            <option value="HI">HI</option>
+				            <option value="ID">ID</option>
+				            <option value="IL">IL</option>
+				            <option value="IN">IN</option>
+				            <option value="IA">IA</option>
+				            <option value="KS">KS</option>
+				            <option value="KY">KY</option>
+				            <option value="LA">LA</option>
+				            <option value="ME">ME</option>
+				            <option value="MD">MD</option>
+				            <option value="MA">MA</option>
+				            <option value="MI">MI</option>
+				            <option value="MN">MN</option>
+				            <option value="MS">MS</option>
+				            <option value="MO">MO</option>
+				            <option value="MT">MT</option>
+				            <option value="NE">NE</option>
+				            <option value="NV">NV</option>
+				            <option value="NH">NH</option>
+				            <option value="NJ">NJ</option>
+				            <option value="NM">NM</option>
+				            <option value="NY">NY</option>
+				            <option value="NC">NC</option>
+				            <option value="ND">ND</option>
+				            <option value="OH">OH</option>
+				            <option value="OK">OK</option>
+				            <option value="OR">OR</option>
+				            <option value="PA">PA</option>
+				            <option value="RI">RI</option>
+				            <option value="SC">SC</option>
+				            <option value="SD">SD</option>
+				            <option value="TN">TN</option>
+				            <option value="TX">TX</option>
+				            <option value="UT">UT</option>
+				            <option value="VT">VT</option>
+				            <option value="VA">VA</option>
+				            <option value="WA">WA</option>
+				            <option value="WV">WV</option>
+				            <option value="WI">WI</option>
+				            <option value="WY">WY</option>
+				        </select>
 			    	</div>
 			  	</div>
+
 			</div>
 			<div class="col-xs-6">
 		  		<button type="submit" class="btn btn-default">Submit</button>
