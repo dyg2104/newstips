@@ -4,7 +4,7 @@ Newstips.Routers.NewsTipsRouter = Backbone.Router.extend({
 		"search" : "search",
 		"search/:query" : "searchResults"
 	},
-	
+
 	tips: function () {
 		var tips = new Newstips.Collections.Tips();
 		tips.fetch({
@@ -12,12 +12,19 @@ Newstips.Routers.NewsTipsRouter = Backbone.Router.extend({
 			})
 		})
 	},
-	
+
 	search: function () {
-		
-	}, 
-	
-	searchResults: function () {
-		
+		var view = new Newstips.Views.SearchShow()
+	},
+
+	searchResults: function (query) {
+		var tips = new Newstips.Collections.Tips();
+		tips.fetch({
+			success: function({
+				var view = new Newstips.Views.IndexShow({
+					// collection: Newstips.Collections.
+				});
+			})
+		})
 	}
 })
