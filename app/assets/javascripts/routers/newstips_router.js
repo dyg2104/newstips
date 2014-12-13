@@ -17,7 +17,7 @@ Newstips.Routers.NewsTipsRouter = Backbone.Router.extend({
 		
 	}, 
 	
-	searchResults: function () {
+	searchResults: function (query) {
 		
 	}
 })
