@@ -6,7 +6,7 @@ class CreateUserSaves < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :user_views, :user_id
-    add_index :user_views, :tip_id
+    add_index :user_saves, :user_id
+    add_index :user_saves, :tip_id
   end
 end
