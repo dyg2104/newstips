@@ -1,0 +1,1 @@
+Newstips.Models.Tip = Backbone.Model.extend({});
