@@ -32,11 +32,7 @@ Newstips.Routers.NewstipsRouter = Backbone.Router.extend({
 		$.get(
 			"/api/tips?query=" + query
 		).success(function(data){
-			console.log("SUCESS");
-			console.log(data.tips);
 			tips.add(data.tips);
-
-
 		});
 		var tipsShow = new Newstips.Views.Tips({ collection: tips });
 		this.root.html(tipsShow.render().$el);

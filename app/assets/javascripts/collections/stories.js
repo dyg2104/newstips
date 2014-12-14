@@ -1,0 +1,1 @@
+Newstips.Collections.Stories = Backbone.Model.extend({});
