@@ -16,13 +16,8 @@ Newstips.Views.Tip = Backbone.View.extend({
 		
 		$.get(
 			"/api/related_articles?city=" + city + "&subject=" + subject
-		).success(function(data){			//
-			// var stories = new Newstips.Models.Story();
-			// stories.set(data.related_articles);
-			// that.model.stories = stories;
-			// console.log(data.related_articles[0]);
+		).success(function(data){			
 			that.model.set("story", data.related_articles[0]);
-			console.log(that.model);
 		});
 			
 		var content = this.template({ tip: this.model });
