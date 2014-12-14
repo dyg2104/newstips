@@ -4,7 +4,7 @@ window.Newstips = {
   Views: {},
   Routers: {},
   initialize: function($root) {
-		new Newstips.Routers.NewstipsRouter($root);
+		Newstips.newsrouter = new Newstips.Routers.NewstipsRouter($root);
 		Backbone.history.start();
   }
 };
