@@ -13,9 +13,11 @@ Newstips.Views.SearchShow = Backbone.View.extend({
     event.preventDefault();
     var that = this;
     console.log($(event.currentTarget))
-    var search_field = $(event.currentTarget);
+    var search_field = $('input').first().val();
     // api/tips
-    window.location = "/search/" + event;
+    console.log(search_field);
+    Newstips.newsrouter.navigate('search/' + search_field, { trigger: true });
+    // window.location = "/search/" + event;
   },
 
   render: function(){
