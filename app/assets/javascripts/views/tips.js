@@ -5,9 +5,9 @@ Newstips.Views.Tips = Backbone.View.extend({
 		this.listenTo(this.collection, 'add sync remove', this.render);
 	},
 	
-	tagName: 'table',
+	tagName: 'div',
 	
-	className: 'table table-striped',
+	className: 'tip-wrapper',
 	
 	render: function () {
 		var content = this.template();
