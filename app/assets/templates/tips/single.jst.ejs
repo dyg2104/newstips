@@ -16,8 +16,9 @@
             <li><%= tip.get('subject') %></li>
             <li><%= tip.get('city') %>, <%= tip.get('state') %></li>
             <li><em>Does not want name publicized</em></li>
-						<li><a href="#"><%= tip.get('story') %></a></li>
-						
+            <% if (tip.get('story')) { %>
+              <li><a href="#"><%= tip.get('story') %></a></li>
+            <% } %>
         </ul>
     </div>
 
