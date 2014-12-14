@@ -1,22 +1,24 @@
-<td class="col-xs-1">
-	<div>
-            <div><%= tip.get('name') %></div>
-            <div><%= tip.get('subject') %></div>
-            
-    </div>
-</td>
-
-<td class="col-xs-8">
 <div class="tip-wrapper">
+    <div class="col-xs-8">
         <div class="tip">
             <p class="tip-paragraph">
                 <%= tip.get('text') %>
             </p>
         </div>
+
+        <p class="tip-footnote">Submitted March 12th, 2014 at 11:47PM</p>
+    </div>
+
+    <div class="col-xs-4">
+        <ul>
+            <li><strong><%= tip.get('name') %></strong></li>
+            <li><a href="mailto:<%= tip.get('email') %>"><%= tip.get('email') %></a></li>
+            <li><%= tip.get('subject') %></li>
+            <li><%= tip.get('city') %>, <%= tip.get('state') %></li>
+            <li><em>Does not want name publicized</em></li>
+        </ul>
+    </div>
+
+    <div class="clearfix"></div>
 </div>
-</td>
-<td class="col-xs-4">	
-    <div><%= tip.get('city') %>, <%= tip.get('state') %> </div>
-</td>
-<td class="col-xs-2"><%= tip.get('phone') %></td>
-<td class="col-xs-2"><a href="mailto:<%= tip.get('email') %>"><%= tip.get('email') %></a></td>
+
