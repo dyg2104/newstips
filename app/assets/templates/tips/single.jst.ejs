@@ -1,5 +1,22 @@
-<td><%= tip.get('name') %></td>
-<td><%= tip.get('text') %></td>
-<td><%= tip.get('city') %></td>
-<td><%= tip.get('phone') %></td>
-<td><%= tip.get('email') %></td>
+<td class="col-xs-1">
+	<div>
+            <div><%= tip.get('name') %></div>
+            <div><%= tip.get('subject') %></div>
+            
+    </div>
+</td>
+
+<td class="col-xs-8">
+<div class="tip-wrapper">
+        <div class="tip">
+            <p class="tip-paragraph">
+                <%= tip.get('text') %>
+            </p>
+        </div>
+</div>
+</td>
+<td class="col-xs-4">	
+    <div><%= tip.get('city') %>, <%= tip.get('state') %> </div>
+</td>
+<td class="col-xs-2"><%= tip.get('phone') %></td>
+<td class="col-xs-2"><a href="mailto:<%= tip.get('email') %>"><%= tip.get('email') %></a></td>
