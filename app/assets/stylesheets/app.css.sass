@@ -13,7 +13,6 @@ $cinnabar:          #E74C3C
 $page-gutter: 15px
 
 $font-source-sans:  'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif
-$font-varela:       'Varela Round', 'Helvetica Neue', Helvetica, sans-serif
 $font-montserrat:   'Montserrat', 'Helvetica Neue', Helvetica, sans-serif
 $font-merriweather:   'Merriweather', 'Helvetica Neue', Helvetica, sans-serif
 
@@ -36,6 +35,45 @@ body
     overflow: hidden
     min-height: 900px
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1)
+
+.btn
+    border: 0px
+
+.btn-primary
+    background-color: $madison
+
+
+// HOMEPAGE
+// --------------------------
+.jumbotron
+    margin-bottom: 0px
+
+#header
+    background-color: $madison
+    color: $porcelain
+    border-radius: 0px
+    text-align: center
+    img
+        width: 80%
+        margin: 0px auto
+
+    .tips-subhead
+        font-family: $font-montserrat
+        margin-top: 50px
+        font-size: 26px
+        color: white
+        text-transform: uppercase
+
+.got-tips
+    text-align: center
+    color: $madison
+    font-weight: 800
+    margin-top: 30px
+    margin-bottom: 30px
+
+
+.home-tip-wrapper
+    background-color: lighten($madison-light, 15%)
 
 
 // NAVIGATION
@@ -139,9 +177,6 @@ body
     font-family: $font-montserrat
     font-size: 20px
     color: $light-sea-green
-
-
-.tip-content
 
 .tip-paragraph
     font-size: 20px
